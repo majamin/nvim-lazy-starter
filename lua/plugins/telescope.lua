@@ -16,6 +16,7 @@ function M.config()
 	telescope.setup({})
 end
 
+-- Lazy loads on these mappings
 M.keys = {
 	---MAPPING------COMMAND---------------------------MODE-----DESCRIPTION-----------------
 	{ "<leader>ff", "<cmd>:Telescope find_files<CR>", { "n" }, desc = "Telescope files"   },
