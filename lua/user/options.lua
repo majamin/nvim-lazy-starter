@@ -1,6 +1,8 @@
 local fn = vim.fn
 local o = vim.opt
 
+vim.cmd([[colo habamax]])
+
 o.completeopt = { "menu", "menuone", "noselect", "noinsert" } -- A comma separated list of options for Insert mode completion
 o.number = true -- show line numbers (or only the current one)
 o.relativenumber = true -- line numbers

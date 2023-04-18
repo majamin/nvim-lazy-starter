@@ -4,24 +4,16 @@
 -- ├── ...
 -- └── lua
 --     ├── plugins
---     │   ├── init.lua
---     │   └── telescope.lua
+--     │   ├── init.lua             -- Loads simple plugins
+--     │   └── telescope.lua		-- Larger plugins have separate files
 --     └── user
---         ├── init.lua
 --         ├── lazy_bootstrap.lua
 --         ├── maps.lua
 --         └── options.lua
 
-----------------------------------------------[[ Bootstrap Lazy ]]
+-- NOTE: ensure that you map <leader> before loading Lazy
 
 require("user/lazy_bootstrap")   -- bootstraps folke/lazy
-
-----------------------------------------------[[  User Settings ]]
-
-require("user")                  -- loads lua/user/init.lua
-require("user/options")          -- loads lua/user/options.lua
-require("user/maps")             -- etc.
-
-----------------------------------------------[[  Load Plugins  ]]
-
+require("user/options")          -- loads options, colors, etc.
+require("user/maps")             -- loads non-plugin maps
 require("lazy").setup("plugins") -- loads each lua/plugin/*
